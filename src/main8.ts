@@ -5,17 +5,24 @@
 // private - 내 클래스에서만 접근 가능
 
 class UserACU {
-  public first: string = "";
-  protected last: string;
-  private age: number;
+  // 이렇게 하거나
+  // public first: string = "";
+  // protected last: string;
+  // private age: number;
 
-  constructor(first: string, last: string, age: number) {
+  //prettier-ignore
+  //이렇게
+  constructor(
+    public first: string, 
+    protected last: string, 
+    private age: number
+    ) {
     this.first = first;
     this.last = last;
     this.age = age;
   }
 
-  getAge() {
+  protected getAge() {
     return `${this.first} ${this.last} ${this.age} `;
   }
 }
