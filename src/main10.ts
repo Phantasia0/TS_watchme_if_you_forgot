@@ -16,6 +16,8 @@
 //하지만 사용하는 패키지마다 이럴수는 없으므로
 //https://github.com/DefinitelyTyped/DefinitelyTyped
 //npm info @types/lodash
+//npm i @types/lodash -D
+//전세계 개발자들이 만들어놓은 dts 파일을 가져와서 쓰겟다.
 
 import _ from "lodash";
 
