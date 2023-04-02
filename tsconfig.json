@@ -6,6 +6,7 @@
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
     "strict": true
+    // "typeRoots": ["./node_modules/@types"] //기본값
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
