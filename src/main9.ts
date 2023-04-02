@@ -27,3 +27,46 @@ console.log(
   toArray([1,2],[3,4]),
   // toArray<Arr>([1,2],[3,4,5])
 )
+
+/* 11. 제네릭 - 클래스 */
+class UserGeneric<P> {
+  // public payload;
+  constructor(public payload: P) {
+    //이렇게 축약 가능
+    // this.payload = payload;
+  }
+  getPayload() {
+    return this.payload;
+  }
+}
+
+interface UserAType {
+  name: string;
+  age: number;
+  isValid: boolean;
+}
+
+interface UserBType {
+  name: string;
+  age: number;
+  emails: string[];
+}
+
+const phantasia = new UserGeneric<UserAType>({
+  name: "SWJ",
+  age: 99,
+  isValid: true,
+});
+
+const zeon = new UserGeneric<UserBType>({
+  name: "Neo",
+  age: 102,
+  emails: ["neo@gmail.com"],
+});
+
+const leon = new UserGeneric<UserAType & UserBType>({
+  name: "Neo",
+  age: 102,
+  isValid: true,
+  emails: ["neo@gmail.com"],
+});
