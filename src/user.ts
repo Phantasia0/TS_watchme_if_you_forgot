@@ -6,5 +6,5 @@ export interface UserMod {
 }
 
 export function getFullName(user: UserMod) {
-  return `${user.firstName} ${user.lastname}`;
+  return `${user.firstName} ${user.lastName}`;
 }

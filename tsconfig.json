@@ -1,13 +1,28 @@
 {
+  //만들어진 타입스크립트의 코드를 자바스크립트로 변환하기 위해서 결정해주는 옵션
   "compilerOptions": {
+    //컴파일될 ES 버전 명시
     "target": "ES2015",
+    //모듈 시스템 지정 -"CommonJS", "ESNext" , "AMD"
     "module": "ESNext",
+    //모듈 해석 방식 지정 - "Node","Classic"
     "moduleResolution": "node",
+    //ESM 모듈 방식 호환성 활성화 여부
     "esModuleInterop": true,
+    //모든 파일을 모듈로 컴파일, import 혹은 export 키워드 필수
+    "isolatedModules": true,
+    //모듈 해석에 사용할 기준 경로 지정
+    "baseUrl": "./",
+    //컴파일에서 사용할 라이브러리 지정
     "lib": ["ESNext", "DOM"],
+    //더 엄격한 타입 검색 활성화
     "strict": true
+    // 컴파일러가 참조할 타입 선언(d.ts)의 경로를 지정
     // "typeRoots": ["./node_modules/@types"] //기본값
   },
+  //컴파일할 파일 경로 목록
   "include": ["src/**/*.ts"],
+
+  //컴파일에서 제외할 파일 경로 목록
   "exclude": ["node_modules"]
 }
